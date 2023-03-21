@@ -6,7 +6,7 @@ export default createStore({
             path: "http://127.0.0.1:8000",
             loading: 1,
             token: (localStorage.getItem("token") == null) ? "" : localStorage.getItem("token"),
-            isAuthenticated: (localStorage.getItem("isAuthenticated") == null) ? false : JSON.parse(localStorage.getItem("isAuthenticated")),
+            isAuthenticated: (localStorage.getItem("isAuthenticated") == null) ? '' : JSON.parse(localStorage.getItem("isAuthenticated") || 'false'),
         }
     },
     getters: {

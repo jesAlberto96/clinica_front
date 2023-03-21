@@ -74,7 +74,7 @@
             const current_page = ref(false);
             const data = ref(false);
 
-			const findByPage = async (page) => {
+			const findByPage = async (page: any) => {
                 const response = await patient.dispatch('findByPage', { page });
 
                 if (response.data){
@@ -86,7 +86,7 @@
                 }
 			}
 
-            const deletePatient = async (id) => {
+            const deletePatient = async (id: any) => {
                 if (confirm("Do you want to delete this patient?")){
                     const response = await patient.dispatch('delete', { id });
                     if (response.meta.success){

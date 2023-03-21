@@ -3,16 +3,10 @@ import config from '@/store/config/';
 
 function handleErrorsPOST(data: any){
     if ('errors' in data.meta){
-        const errors = Object.values(data.meta.errors);
-        const finalErrors: any = [];
-        errors.map(function (error: any) {
-            finalErrors.push(error);
-        });
-
         return {
             meta: {
                 status: false,
-                errors: finalErrors
+                errors: data.meta.errors
             }
         }
     }

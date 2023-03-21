@@ -52,12 +52,12 @@
 
 				if (response.meta.success){
 					config.commit('setIsAuthenticated', true)
-					localStorage.setItem("isAuthenticated", true);
+					localStorage.setItem("isAuthenticated", 'true');
 					localStorage.setItem("token", response.data.token);
 					errors.value = false;
 				} else {
 					config.commit('setIsAuthenticated', false)
-					localStorage.setItem("isAuthenticated", false);
+					localStorage.setItem("isAuthenticated", 'false');
 					localStorage.setItem("token", "");
 					errors.value = response.meta.errors;
 				}

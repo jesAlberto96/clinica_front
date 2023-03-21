@@ -45,7 +45,7 @@
 			},
 		},
 
-		setup(props) {
+		setup(props: any) {
             const data = ref(false);
 
 			const find = async () => {

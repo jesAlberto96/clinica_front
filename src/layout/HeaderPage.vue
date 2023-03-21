@@ -20,7 +20,7 @@
 
 			const closeSession = async () => {
 				config.commit('setIsAuthenticated', false)
-				localStorage.setItem("isAuthenticated", false);
+				localStorage.setItem("isAuthenticated", 'false');
 				localStorage.setItem("token", "");
 
 				router.push({

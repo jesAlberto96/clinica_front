@@ -57,7 +57,6 @@
 	import { ref, computed, onMounted  } from 'vue';
     import patient from '@/store/patient/';
 	import router from '@/router';
-	import Toastify from 'toastify-js'
 
 	export default {
 		setup() {
