@@ -3,7 +3,7 @@ import { createStore } from 'vuex'
 export default createStore({
     state () {
         return {
-            path: "http://127.0.0.1:8000",
+            path: "https://apptest.innguia.com",
             loading: 1,
             token: (localStorage.getItem("token") == null) ? "" : localStorage.getItem("token"),
             isAuthenticated: (localStorage.getItem("isAuthenticated") == null) ? '' : JSON.parse(localStorage.getItem("isAuthenticated") || 'false'),
